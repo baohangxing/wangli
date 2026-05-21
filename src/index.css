@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-warm-50 text-warm-900 dark:bg-warm-950 dark:text-warm-100 transition-colors duration-200;
+    font-family: "Noto Serif SC", Georgia, "Times New Roman", serif;
+  }
+}
+
+/* ── Story markdown content overrides ─────────────────────── */
+/* @uiw/react-markdown-preview renders inside .wmde-markdown   */
+.story-md-wrap .wmde-markdown {
+  background: transparent !important;
+  color: inherit !important;
+  font-family: "Noto Serif SC", Georgia, serif !important;
+  font-size: 1.125rem !important;
+  line-height: 2 !important;
+}
+
+.story-md-wrap .wmde-markdown h1,
+.story-md-wrap .wmde-markdown h2,
+.story-md-wrap .wmde-markdown h3,
+.story-md-wrap .wmde-markdown h4 {
+  font-family: "Noto Serif SC", Georgia, serif !important;
+  font-weight: 600 !important;
+  color: inherit !important;
+  border-bottom-color: #e8d4aa !important;
+}
+
+.dark .story-md-wrap .wmde-markdown h1,
+.dark .story-md-wrap .wmde-markdown h2,
+.dark .story-md-wrap .wmde-markdown h3,
+.dark .story-md-wrap .wmde-markdown h4 {
+  border-bottom-color: #5c3820 !important;
+}
+
+.story-md-wrap .wmde-markdown p {
+  text-indent: 2em;
+  margin-top: 0.75em !important;
+  margin-bottom: 0.75em !important;
+}
+
+.story-md-wrap .wmde-markdown blockquote {
+  border-left-color: #d9b97c !important;
+  background: #f4ead5 !important;
+  border-radius: 0 4px 4px 0;
+  padding: 0.75rem 1rem !important;
+  margin: 1.5rem 0 !important;
+}
+
+.dark .story-md-wrap .wmde-markdown blockquote {
+  background: rgba(60, 36, 21, 0.4) !important;
+  border-left-color: #7d4e28 !important;
+}
+
+.story-md-wrap .wmde-markdown a {
+  color: #9c6630 !important;
+  text-decoration: underline;
+  text-decoration-color: #d9b97c;
+}
+
+.dark .story-md-wrap .wmde-markdown a {
+  color: #d9b97c !important;
+  text-decoration-color: #7d4e28;
+}
+
+.story-md-wrap .wmde-markdown hr {
+  border-color: #e8d4aa !important;
+  margin: 2rem auto !important;
+  width: 60%;
+}
+
+.dark .story-md-wrap .wmde-markdown hr {
+  border-color: #5c3820 !important;
+}
+
+.story-md-wrap .wmde-markdown code {
+  background: #f4ead5 !important;
+  color: #7d4e28 !important;
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em !important;
+}
+
+.dark .story-md-wrap .wmde-markdown code {
+  background: rgba(60, 36, 21, 0.5) !important;
+  color: #d9b97c !important;
+}
+
+.story-md-wrap .wmde-markdown pre code {
+  background: transparent !important;
+  padding: 0 !important;
+  color: inherit !important;
+}
+
+.story-md-wrap .wmde-markdown pre {
+  background: #3c2415 !important;
+  border-radius: 6px;
+}
+
+.dark .story-md-wrap .wmde-markdown pre {
+  background: #1e1108 !important;
+}
