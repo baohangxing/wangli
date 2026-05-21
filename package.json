@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "generate:stories": "node scripts/story-pipeline-help.mjs",
+    "validate:stories": "node scripts/validate-stories.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
